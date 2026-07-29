@@ -25,13 +25,14 @@ let dealership =[
 
 /* GET home page. */
 router.get('/dealership', async (req, res, next) => {
-    try {
-        const data = await Data.find({});
-        console.log(data)
-        return res.json({ success: true, info: data });
-    } catch (err) {
-        return res.status(500).json({ success: false, error: err.message || err });
-    }
+    res.send("<h1>Hello</h1>");
+    // try {
+    //     const data = await Data.find({});
+    //     console.log(data)
+    //     return res.json({ success: true, info: data });
+    // } catch (err) {
+    //     return res.status(500).json({ success: false, error: err.message || err });
+    // }
 });
 
 
